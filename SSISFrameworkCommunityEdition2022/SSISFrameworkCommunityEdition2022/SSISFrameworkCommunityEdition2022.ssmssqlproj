@@ -3,7 +3,19 @@
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="VSQL2014\FWCE2:VSQL2014\A. Ray Leonard">
+        <ConnectionNode Name="VDEMO17\FWCE:VDEMO17\A. Ray Leonard">
+          <Created>2022-01-01T08:48:20.6549862-05:00</Created>
+          <Type>SQL</Type>
+          <Server>VDEMO17\FWCE</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="VSQL2014\FWCE2:VDEMO17\A. Ray Leonard">
           <Created>2021-12-29T10:19:54.2793398-05:00</Created>
           <Type>SQL</Type>
           <Server>VSQL2014\FWCE2</Server>
@@ -20,14 +32,14 @@
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="00_MasterBuild.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VSQL2014\FWCE2:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>VSQL2014\FWCE2</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VDEMO17\FWCE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>VDEMO17\FWCE</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>00_MasterBuild.sql</FullPath>
         </FileNode>
         <FileNode Name="04_Framework_Parent.overrides.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VSQL2014\FWCE2:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>VSQL2014\FWCE2</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VDEMO17\FWCE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>VDEMO17\FWCE</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>04_Framework_Parent.overrides.sql</FullPath>
         </FileNode>
@@ -56,20 +68,20 @@
           <FullPath>12_AdddbVersion.proc.sql</FullPath>
         </FileNode>
         <FileNode Name="20_execute_catalog_package.proc.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VSQL2014\FWCE2:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>VSQL2014\FWCE2</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VDEMO17\FWCE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>VDEMO17\FWCE</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>20_execute_catalog_package.proc.sql</FullPath>
         </FileNode>
         <FileNode Name="21_custom.execute_catalog_parent_package.proc.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VSQL2014\FWCE2:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>VSQL2014\FWCE2</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VDEMO17\FWCE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>VDEMO17\FWCE</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>21_custom.execute_catalog_parent_package.proc.sql</FullPath>
         </FileNode>
         <FileNode Name="30_Packages.table.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VSQL2014\FWCE2:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>VSQL2014\FWCE2</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VDEMO17\FWCE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>VDEMO17\FWCE</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>30_Packages.table.sql</FullPath>
         </FileNode>
@@ -92,8 +104,8 @@
           <FullPath>45_Insert_Application.sql</FullPath>
         </FileNode>
         <FileNode Name="50_ApplicationPackages.table.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VSQL2014\FWCE2:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>VSQL2014\FWCE2</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VDEMO17\FWCE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>VDEMO17\FWCE</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>50_ApplicationPackages.table.sql</FullPath>
         </FileNode>
@@ -104,8 +116,8 @@
           <FullPath>55_Insert_ApplicationPackages.sql</FullPath>
         </FileNode>
         <FileNode Name="60_ApplicationPackages.FailApplicationOnPackageFailure.col.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VSQL2014\FWCE2:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>VSQL2014\FWCE2</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:VDEMO17\FWCE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>VDEMO17\FWCE</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>60_ApplicationPackages.FailApplicationOnPackageFailure.col.sql</FullPath>
         </FileNode>

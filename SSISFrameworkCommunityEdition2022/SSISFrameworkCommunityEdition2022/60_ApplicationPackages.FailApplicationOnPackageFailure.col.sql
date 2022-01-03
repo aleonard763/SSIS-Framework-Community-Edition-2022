@@ -6,7 +6,12 @@
                to the custom.ApplicationPackages table.
 
  Version History:
-   1.0.0: 29 Dec 2021 - Andy Leonard - initial release.
+   1.0.0: 29 Dec 2021 - Andy Leonard - 1.0.0.20211229 - initial release.
+   1.0.1: 01 Jan 2022 - Andy Leonard - 1.0.1.20220101 - changed data types for folder name
+                                                        , project name, and package name to
+									                    match SSISDB.
+														Added default to 
+														ApplicationPackages.FailApplicationOnPackageFailure.
 
  Prerequisites:
    05_SSISFrameworkDB.database.sql
@@ -42,6 +47,27 @@ If Not Exists(Select s.name + '.' + t.name + '.' + c.name
 Else
  print ' - Custom.ApplicationPackages.FailApplicationOnPackageFailure column already exists.'
 go
+
+print ''
+print 'DF_custom_ApplicationPackages_FailApplicationOnPackageFailure'
+If Not Exists(Select [name]
+              From [sys].[default_constraints]
+			  Where [name] = N'DF_custom_ApplicationPackages_FailApplicationOnPackageFailure')
+ begin
+
+  print ' - Creating DF_custom_ApplicationPackages_FailApplicationOnPackageFailure'
+   
+   Alter Table [custom].ApplicationPackages
+    Add Constraint DF_custom_ApplicationPackages_FailApplicationOnPackageFailure
+	 Default(1)
+	  For FailApplicationOnPackageFailure
+
+  print ' - DF_custom_ApplicationPackages_FailApplicationOnPackageFailure created'
+ end
+Else
+ begin
+  print ' - DF_custom_ApplicationPackages_FailApplicationOnPackageFailure already exists.'
+ end
 
 Update custom.ApplicationPackages
 Set FailApplicationOnPackageFailure = 1

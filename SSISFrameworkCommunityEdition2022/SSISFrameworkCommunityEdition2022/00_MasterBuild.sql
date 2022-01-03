@@ -34,7 +34,12 @@
  Description: Adds objects to the SSISFrameworkDB database to support the Enterprise Data & Analytics SSIS Framework Community Edition 2022
 
  Version History:
-   1.0: (00_MasterBuild) 29 Dec 2021 - Andy Leonard - initial release.
+   1.0.0: 29 Dec 2021 - Andy Leonard - 1.0.0.20211229 - initial release.
+   1.0.1: 01 Jan 2022 - Andy Leonard - 1.0.1.20220101 - changed data types for folder name
+                                                        , project name, and package name to
+									                    match SSISDB.
+														Added default to 
+														ApplicationPackages.FailApplicationOnPackageFailure.
 
  Prerequisites:
    N/A
@@ -45,9 +50,9 @@
 Set NoCount ON
 Set NoExec OFF /* in case NoExec was set to ON */
 
-:setvar ScriptPath "E:\github\SSISFrameworkCommunityEdition2022\SSISFrameworkCommunityEdition2022\SSISFrameworkCommunityEdition2022\"
-:setvar dbVersionNumber "1.0.0.20211229"
-:setvar dbVersionNotes "SSIS Framework Community Edition 2022 - initial release."
+:setvar ScriptPath "G:\githubDEV\SSIS-Framework-Community-Edition-2022-main\SSISFrameworkCommunityEdition2022\SSISFrameworkCommunityEdition2022\"
+:setvar dbVersionNumber "1.0.1.20220101"
+:setvar dbVersionNotes "Updated folder name, project name, and package name data types to match SSISDB.Added default to ApplicationPackages.FailApplicationOnPackageFailure."
 
 declare @ErrMsg varchar(4000)
 
@@ -156,20 +161,6 @@ print 'SQLCmd: Calling  $(ScriptPath)60_ApplicationPackages.FailApplicationOnPac
  -- Execute 99_Update_FailApplicationOnPackageFailure....
 print 'SQLCmd: Calling  $(ScriptPath)99_Update_FailApplicationOnPackageFailure.sql'
 :r $(ScriptPath)99_Update_FailApplicationOnPackageFailure.sql
-
---If Not Exists(Select *
---              From SSISFrameworkDB.custom.dbVersion)
---begin try
--- print 'Updating dbVersion'
---declare @dbVersionNumber varchar(20) = '1.0.0.20211229'
--- exec SSISFrameworkDB.custom.AddDbVersion
---      @dbVersionNumber = @dbVersionNumber
---    , @dbVersionNotes = 'Initial deployment'
--- print ''
---end try
---begin catch
---  print 'Initial deployment error adding a row to SSISFrameworkDB.custom.DbVersion table'
---end catch
 
  /* Set NoExec OFF */
 Set NoExec OFF

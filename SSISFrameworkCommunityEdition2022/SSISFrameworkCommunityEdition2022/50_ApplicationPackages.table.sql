@@ -5,7 +5,7 @@
  Description: Creates a table to contain SSIS application packages metadata.
 
  Version History:
-   1.0.0: 29 Dec 2021 - Andy Leonard - initial release.
+   1.0.0: 29 Dec 2021 - Andy Leonard - 1.0.0.20211229 - initial release.
 
  Prerequisites:
    05_SSISFrameworkDB.database.sql

@@ -6,7 +6,10 @@
                the SSIS Framework parent package.
 
  Version History:
-   1.0.0: 29 Dec 2021 - Andy Leonard - initial release.
+   1.0.0: 29 Dec 2021 - Andy Leonard - 1.0.0.20211229 - initial release.
+   1.0.1: 01 Jan 2022 - Andy Leonard - 1.0.1.20220101 - changed data types for folder name
+                                                        , project name, and package name to
+									                    match SSISDB.
 
  Prerequisites:
    05_SSISFrameworkDB.database.sql
@@ -43,8 +46,10 @@ go
                the SSIS Framework parent package.
 
  Version History:
-   1.0.0: 29 Dec 2021 - Andy Leonard - initial release.
-
+   1.0.0: 29 Dec 2021 - Andy Leonard - 1.0.0.20211229 - initial release.
+   1.0.1: 01 Jan 2022 - Andy Leonard - 1.0.1.20220101 - changed data types for folder name
+                                                        , project name, and package name to
+									                    match SSISDB.
  Prerequisites:
    05_SSISFrameworkDB.database.sql
    10_Custom.schema.sql
@@ -54,9 +59,9 @@ go
 */
 Create Procedure custom.execute_catalog_parent_package
   @application_name nvarchar(255)
-, @package_name nvarchar(130) = N'Parent.dtsx'
-, @project_name nvarchar(260) = N'Framework'
-, @folder_name nvarchar(260) = N'SSIS'
+, @package_name nvarchar(260) = N'Parent.dtsx'
+, @project_name nvarchar(128) = N'Framework'
+, @folder_name nvarchar(128) = N'SSIS'
 , @logging_level smallint = 1
 As
 
